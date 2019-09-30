@@ -1,0 +1,26 @@
+@import "header";
+@import "sidebar";
+
+.main-holder {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-content: stretch;
+  align-items: stretch;
+  height: calc(100% - 64px);
+  background-color: $light-grey;
+
+  aside {
+    order: 0;
+    flex: 0 1 auto;
+    align-self: auto;
+  }
+
+  main {
+    order: 0;
+    flex: 1 1 auto;
+    align-self: auto;
+    overflow-x: auto;
+  }
+}
