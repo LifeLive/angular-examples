@@ -1,12 +1,15 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import {MainLayoutComponent} from './shared/components/main-layout/main-layout.component';
+import {HomeComponent} from './shared/layout/home/home.component';
+import {NotFoundComponent} from './shared/layout/not-found/not-found.component';
+import {ChartComponent} from './shared/layout/chart/chart.component';
+
 
 
 const routes: Routes = [
-  // Fallback when no prior route is matched
-  { path: '', redirectTo: '/', pathMatch: 'full' },
-  { path: '', component: MainLayoutComponent}
+  { path: '', component: HomeComponent, },
+  { path: 'chart', component: ChartComponent, },
+  { path: '**', component: NotFoundComponent }
 ];
 
 @NgModule({

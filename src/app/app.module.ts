@@ -1,19 +1,25 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
+
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
-import { MainLayoutComponent } from './shared/components/main-layout/main-layout.component';
-import {HttpClientModule} from '@angular/common/http';
+import {NotFoundComponent} from './shared/layout/not-found/not-found.component';
+
+import { SidebarComponent } from './shared/layout/sidebar/sidebar.component';
+import {HomeComponent} from './shared/layout/home/home.component';
+import { ChartComponent } from './shared/layout/chart/chart.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MainLayoutComponent
+    NotFoundComponent,
+    HomeComponent,
+    SidebarComponent,
+    ChartComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
